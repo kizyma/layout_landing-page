@@ -9,8 +9,9 @@ html {
   line-height: 140%;
   --header-text-color: #FFF;
 }
-.body {
+body {
   margin: 0;
+  padding: 0;
 }
 /* #endregion */
 /* #region header */
@@ -21,7 +22,6 @@ html {
   background-image: url(../images/header-bg-mobile.png);
   background-size: cover;
   background-position: center;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -30,6 +30,7 @@ html {
 .header__top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .header__icons {
   display: flex;
@@ -38,6 +39,14 @@ html {
   align-items: center;
 }
 .header__bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  flex-grow: 1; /* Expand to fill remaining vertical space */
+}
+
+.header__title {
   color: var(--header-text-color);
   text-align: center;
   font-size: 40px;
@@ -45,7 +54,9 @@ html {
   font-weight: 700;
   line-height: 100%;
   letter-spacing: -1.5px;
+  margin-bottom: 10px;
 }
+
 /* #endregion */
 /* #region icon */
 .icon {
@@ -61,7 +72,6 @@ html {
 }
 
 /* #endregion */
-
 /* #region footer */
 .footer {
 
