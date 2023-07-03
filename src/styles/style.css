@@ -1,23 +1,31 @@
 /* #region page */
-html {
+.page {
   font-family: 'Cinzel', serif;
   color: #161616;
   font-size: 16px;
-  font-family: Cinzel;
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
   --header-text-color: #FFF;
+  scroll-behavior: smooth;
 }
-body {
+.page__body {
   margin: 0;
   padding: 0;
+}
+.page__menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  opacity: 0;
+  pointer-events: none;
 }
 /* #endregion */
 /* #region header */
 .header {
   box-sizing: border-box;
-  padding: 24px 20px 40px;
   height: 100vh;
   background-image: url(../images/header-bg-mobile.png);
   background-size: cover;
@@ -27,23 +35,14 @@ body {
   justify-content: space-between;
   column-gap: 10px;
 }
-.header__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header__icons {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  align-items: center;
-}
+
 .header__bottom {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
   flex-grow: 1; /* Expand to fill remaining vertical space */
+  padding: 0 20px 40px;
 }
 
 .header__title {
@@ -58,6 +57,97 @@ body {
 }
 
 /* #endregion */
+/* #region menu */
+
+.top-bar {
+  padding: 24px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar__logo {
+  display: flex;
+}
+
+.top-bar__icons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: #D12D35;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.menu__nav {
+  margin-bottom: 40px;
+}
+
+.menu__content {
+  padding-inline: 20px;
+}
+
+.menu__top {
+  margin-bottom: 40px;
+}
+
+.menu__content{
+  position: relative;
+}
+
+.menu:target {
+  opacity: 1;
+  pointer-events: all;
+}
+.menu__phone-number {
+  color: #FFF;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  line-height: 27px;
+  margin-bottom: 8px;
+}
+
+.menu__phone-number--last {
+  margin-bottom: 16px;
+}
+
+.menu__call-to-order {
+  color: #FFF;
+  text-decoration: none;
+  display: block;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #FFF;
+  width: fit-content;
+
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+}
+/* #endregion */
+/* #region nav */
+.nav__link {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 2px;
+}
+ .nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+ }
+/* #endregion */
 /* #region icon */
 .icon {
   height: 24px;
@@ -69,6 +159,9 @@ body {
 }
 .icon--menu {
   background-image: url(../icons/icon-burger-menu.png);
+}
+.icon--close {
+  background-image: url(../icons/icon-close.png);
 }
 
 /* #endregion */
