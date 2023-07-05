@@ -1,0 +1,33 @@
+/* #region header */
+.header {
+  box-sizing: border-box;
+  height: 100vh;
+  background-image: url(../images/header-bg-mobile.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+
+.header__bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  flex-grow: 1; /* Expand to fill remaining vertical space */
+  padding: 0 20px 40px;
+}
+
+.header__title {
+  color: var(--header-text-color);
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -1.5px;
+  margin-bottom: 10px;
+}
+/* #endregion */
