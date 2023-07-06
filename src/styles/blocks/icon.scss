@@ -3,14 +3,15 @@
   height: 24px;
   width: 24px;
   display: block;
-}
-.icon--phone {
-  background-image: url(../icons/icon-phone.png);
-}
-.icon--menu {
-  background-image: url(../icons/icon-burger-menu.png);
-}
-.icon--close {
-  background-image: url(../icons/icon-close.png);
+
+  &--phone {
+    background-image: url(../icons/icon-phone.png);
+  }
+  &--menu {
+    background-image: url(../icons/icon-burger-menu.png);
+  }
+  &--close {
+    background-image: url(../icons/icon-close.png);
+  }
 }
 /* #endregion */
