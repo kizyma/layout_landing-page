@@ -1,11 +1,22 @@
 /* #region nav */
 .nav {
   &__link {
-    color: #FFF;
+    color: $main-text-color-light;
     text-decoration: none;
     font-size: 22px;
     line-height: 22px;
     letter-spacing: 2px;
+
+    @include onTablet {
+      font-size: 32px;
+      line-height: 32px;
+
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 22px;
+    }
+
   }
   &__list {
     margin: 0;

@@ -1,0 +1,30 @@
+/* #region top-bar */
+.top-bar {
+  padding-block: 24px;
+  @include contentPaddingInline;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include onTablet {
+    padding-block: 64px;
+  }
+
+  &__logo {
+    display: flex;
+
+    @include onTablet {
+      img {
+        content:url("../images/logo-tablet.png");
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* #endregion */
