@@ -22,6 +22,10 @@
     flex-grow: 1; /* Expand to fill remaining vertical space */
     padding-bottom: 40px;
     @include contentPaddingInline;
+
+    @include onTablet {
+      padding-bottom: 64px;
+    }
   }
 
   &__title {

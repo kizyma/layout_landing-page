@@ -1,10 +1,13 @@
 /* #region icon */
 .icon {
+  display: block;
   height: 24px;
   width: 24px;
-  display: block;
-  --background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
+  @include hover(transform, scale(1.2));
 
   @include onTablet {
     height: 32px;
@@ -12,16 +15,19 @@
   }
 
   &--phone {
-    background-image: url(../icons/icon-phone.png);
-    background-repeat: var(--background-repeat);
+    background-image: url(../icons/icon-phone.svg);
   }
+
   &--menu {
-    background-image: url(../icons/icon-burger-menu.png);
-    background-repeat: var(--background-repeat);
+    background-image: url(../icons/icon-burger-menu.svg);
+
+    &:hover {
+      background-image: url(../icons/icon-burger-menu-hover.svg);
+    }
   }
+
   &--close {
-    background-image: url(../icons/icon-close.png);
-    background-repeat: var(--background-repeat);
+    background-image: url(../icons/icon-close.svg);
   }
 }
 /* #endregion */

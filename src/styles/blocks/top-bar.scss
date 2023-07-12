@@ -2,6 +2,7 @@
 .top-bar {
   padding-block: 24px;
   @include contentPaddingInline;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,21 +11,27 @@
     padding-block: 64px;
   }
 
-  &__logo {
-    display: flex;
-
-    @include onTablet {
-      img {
-        content:url("../images/logo-tablet.png");
-      }
-    }
-  }
-
   &__icons {
     display: flex;
     gap: 24px;
     justify-content: center;
     align-items: center;
   }
+
+  &__logo-link {
+    display: flex;
+  }
+
+  &__logo {
+    height: 46px;
+    transition: transform 0.3s ;
+
+    @include hover(transform, scale(1.2));
+
+    @include onTablet {
+      height: 65px;
+    }
+  }
+
 }
 /* #endregion */
